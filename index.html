@@ -1,0 +1,41 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/png" href="images/bear.png">
+  <title>Flappy Bear</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <main>
+      <div class="game-container">
+          <canvas id="game-canvas"></canvas>
+          <div id="score-during-game">0</div>
+          <div id="menu_screen">
+          <div id="title">Flappy Bear</div>
+          <button id="play">Play</button>
+          </div>
+      
+      <div id="game-over-message" class="modal">
+          <div class="modal-content">
+              <span class="close">&times;</span>
+              <p id="main-message">Game Over!</p>
+              <p class="scores" id="game-over-high-score"></p>
+              <p class="scores" id="game-over-score"></p>
+              <p id="desc">Wow you suck at this game, better luck next time!</p>
+              <button id="play-again">Play Again</button>
+          </div>
+      </div>
+    </div>
+  </main>
+<audio id="jump-sound" src="sounds/jump.mp3"></audio>
+  <script type="module" src="script.js"></script>
+
+</body>
+
+</html>

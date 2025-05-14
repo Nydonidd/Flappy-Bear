@@ -1,0 +1,179 @@
+@font-face{
+    font-family: 'FlappyBird';
+    src: url('fonts/flappybirdy.woff') format('woff'),
+         url('fonts/flappybirdy.woff2') format('woff2');
+}
+
+@font-face{
+    font-family:'Flappy_bird';
+    src: url('fonts/FB.woff');
+}
+
+body, html{
+    background-color: #000;
+}
+
+*{
+    font-family: 'Flappy_bird';
+    overflow:hidden;
+    font-weight: 450;
+}
+
+
+.modal{
+    display: none;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 50%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0);
+    align-content: center;
+}
+
+.modal-content{
+    margin-top:10px;
+    overflow:hidden;
+    background-color: #10eb00;
+    margin:auto;
+    padding: 5px;
+    color:white;
+    border:none;
+    border-radius: 10px;
+    width:80%;
+}
+
+.close{
+    color: #fff;
+    float:right;
+    font-size: 28px;
+    margin-right:5px;
+    font-weight:bold;
+}
+
+.close:hover, .close:focus{
+    color:black;
+    text-decoration: none;
+    cursor:pointer;
+    
+}
+
+.hidden{
+    display: none;
+}
+
+.game-container{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    height: 589px;
+    width: 480px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+#game-canvas{
+    display:block;
+    background-image: url("images/background.jpg");
+    margin:auto;
+    width: 480px;
+    height: 589px;
+}
+
+#title{
+    position:absolute;
+    top: 30%;
+    left: 7%;
+    transform: translateX(-50%);
+    font-size: 75px;
+    font-weight: 300;
+    color: white;
+    text-align:center;
+    z-index: 1;
+    animation: title 2s ease-in-out infinite alternate;
+}
+
+@keyframes title{
+    0%{
+        transform: translate(0,0);
+    }
+    25%{
+        transform: translate(-5px, -5px);
+    }
+    50%{
+        transform: translate(5px, 5px);
+    }
+    75%{
+        transform: translate(-5px, 5px);
+    }
+    100%{
+        transform: translate(5px, -5px);
+    }
+}
+
+
+
+#play{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 30px 30px;
+    font-size: 35px;
+    border-radius: 15px;
+    background-color: #4CAF50;
+    color:white;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    animation: playbutton 2s ease-in-out infinite alternate;
+}
+
+#play:hover{
+    background-color: #3e8e41;;
+}
+
+#game-over-message button {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#main-message{
+    
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.scores{
+    margin-top:-25px;
+    margin-bottom:40px;
+    font-size:20px;
+}
+
+#desc{
+    font-size:20px;
+}
+
+#jump-sound{
+    display:hidden;
+}
+
+#score-during-game{
+    position: absolute;
+    top: 11%;
+    left: 50%;
+    transform: translate(0, -50%);
+    font-size: 45px;
+    color: white;
+}
